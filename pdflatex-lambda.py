@@ -1,9 +1,10 @@
 import sys
 
 
-def pdflatex():
+def pdflatex(event, context):
     pass
 
 
-def lambda_handler():
+def lambda_handler(*args):
     pass
+
