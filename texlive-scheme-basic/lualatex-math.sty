@@ -1,0 +1,322 @@
+%%
+%% This is file `lualatex-math.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% lualatex-math.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright 2011, 2012 Philipp Stephani
+%% 
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of
+%% LaTeX version 2009/09/24 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[2009/09/24]
+\RequirePackage{expl3}[2012/08/14]
+\ProvidesExplPackage{lualatex-math}{2013/01/13}{1.2}%
+  {Patches for mathematics typesetting with LuaLaTeX}
+\RequirePackage { etoolbox } [ 2007/10/08 ]
+\RequirePackage { luatexbase } [ 2010/05/27 ]
+\RequirePackage { filehook } [ 2011/03/09 ]
+\RequireLuaModule { lualatex-math } [ 2011/05/05 ]
+\cs_new_nopar:Npn \__lltxmath_restore_catcode:N #1 {
+  \char_set_catcode:nn { \int_eval:n { `#1 } }
+    { \char_value_catcode:n { `#1 } }
+}
+\exp_args:Nx \AtEndOfPackage {
+  \__lltxmath_restore_catcode:N \$
+}
+\char_set_catcode_math_toggle:N \$
+\msg_new:nnn { lualatex-math } { luatex-required } {
+  The~ lualatex-math~ package~ requires~ LuaTeX. \\
+  I~ will~ stop~ loading~ now.
+}
+\msg_new:nnnn { lualatex-math } { different-meanings } {
+  I've~ expected~ the~ control~ sequences \\
+  #1~ and~ #3 \\
+  to~ have~ the~ same~ meaning,~ but~ their~ meanings~ are~ different.
+} {
+  The~ meaning~ of~ #1~ is: \\
+  #2 \\
+  The~ meaning~ of~ #3~ is: \\
+  #4
+}
+\msg_new:nnn { lualatex-math } { macro-expected } {
+  I've~ expected~ that~ #1~ is~ a~ macro,~ but~ it~ isn't.
+}
+\msg_new:nnn { lualatex-math } { wrong-meaning } {
+  I've~ expected~ #1~ to~ have~ the~ meaning \\
+  #3, \\
+  but~ it~ has~ the~ meaning \\
+  #2.
+}
+\msg_new:nnn { lualatex-math } { patch-macro } {
+  I'm~ going~ to~ patch~ macro~ #1.
+}
+\luatex_if_engine:F {
+  \msg_error:nn { lualatex-math } { luatex-required }
+  \endinput
+}
+\cs_new_eq:NN \__lltxmath_temp:w \prg_do_nothing:
+\luatexbase@ensure@primitive { Umathcode }
+\luatexbase@ensure@primitive { Umathcodenum }
+\luatexbase@ensure@primitive { Umathchardef }
+\cs_new_protected_nopar:Npn \__lltxmath_assert_eq:NN #1 #2 {
+  \cs_if_eq:NNF #1 #2 {
+    \msg_error:nnxxxx { lualatex-math } { different-meanings }
+      { \token_to_str:N #1 } { \token_to_meaning:N #1 }
+      { \token_to_str:N #2 } { \token_to_meaning:N #2 }
+  }
+}
+\cs_new_protected_nopar:Npn \__lltxmath_patch:NNnnn #1 #2 #3 #4 #5 {
+  \cs_if_exist:NT #1 {
+    \token_if_macro:NTF #1 {
+      \group_begin:
+      #2 \__lltxmath_temp:w #3 { #4 }
+      \cs_if_eq:NNTF #1 \__lltxmath_temp:w {
+        \msg_info:nnx { lualatex-math } { patch-macro }
+          { \token_to_str:N #1 }
+        \group_end:
+        #2 #1 #3 { #5 }
+      } {
+        \msg_warning:nnxxx { lualatex-math } { wrong-meaning }
+          { \token_to_str:N #1 } { \token_to_meaning:N #1 }
+          { \token_to_meaning:N \__lltxmath_temp:w }
+        \group_end:
+      }
+    } {
+      \msg_warning:nnx { lualatex-math } { macro-expected }
+        { \token_to_str:N #1 }
+    }
+  }
+}
+\cs_generate_variant:Nn \__lltxmath_patch:NNnnn { c }
+\cs_new_protected_nopar:Npn \__lltxmath_set_mathchar:NN #1 #2 {
+  \luatexUmathchardef #1
+  \lua_now_x:n {
+    lualatex.math.print_class_fam_slot( \int_eval:n { `#2 } )
+  }
+  \scan_stop:
+}
+\__lltxmath_assert_eq:NN \newfam \new@mathgroup
+\__lltxmath_patch:NNnnn \new@mathgroup \cs_set_nopar:Npn { } {
+  \alloc@ 8 \mathgroup \chardef \sixt@@n
+} {
+  \alloc@ 8 \mathgroup \chardef \c_two_hundred_fifty_six
+}
+\cs_set_eq:NN \newfam \new@mathgroup
+\luatexbase@ensure@primitive { Ustack }
+\AtEndPreamble {
+  \@ifpackageloaded { amsmath } { } {
+    \__lltxmath_patch:NNnnn \frac \cs_set_nopar:Npn { #1 #2 } {
+      {
+        \begingroup #1 \endgroup \over #2
+      }
+    } {
+      {
+        \luatexUstack { \group_begin: #1 \group_end: \over #2 }
+      }
+    }
+  }
+}
+\luatexbase@ensure@primitive { alignmark }
+\luatexbase@ensure@primitive { Ustartmath }
+\luatexbase@ensure@primitive { Ustopmath }
+\luatexbase@ensure@primitive { Umathstacknumup }
+\luatexbase@ensure@primitive { Umathstackdenomdown }
+\luatexbase@ensure@primitive { Umathstackvgap }
+\int_const:Nn \c__lltxmath_std_minus_mathcode_int { "2200 }
+\int_const:Nn \c__lltxmath_std_equal_mathcode_int { "303D }
+\cs_new_nopar:Npn \__lltxmath_char_dim:NN #1 #2 {
+  #1 \textfont
+  \lua_now_x:n {
+    lualatex.math.print_fam_slot( \int_eval:n { `#2 } )
+  }
+}
+\tl_new:N \l__lltxmath_minus_mathchar
+\tl_new:N \l__lltxmath_equal_mathchar
+\AtBeginOfPackageFile { amsmath } {
+  \__lltxmath_set_mathchar:NN \l__lltxmath_minus_mathchar \-
+  \__lltxmath_set_mathchar:NN \l__lltxmath_equal_mathchar \=
+  \char_set_mathcode:nn { `\- } { \c__lltxmath_std_minus_mathcode_int }
+  \char_set_mathcode:nn { `\= } { \c__lltxmath_std_equal_mathcode_int }
+  \AtEndOfPackageFile { amsmath } {
+    \cs_set_eq:NN \std@minus \l__lltxmath_minus_mathchar
+    \cs_set_eq:NN \std@equal \l__lltxmath_equal_mathchar
+    \luatexUmathcodenum `\- \l__lltxmath_minus_mathchar
+    \luatexUmathcodenum `\= \l__lltxmath_equal_mathchar
+  }
+}
+\AtEndOfPackageFile * { amsmath } {
+  \tl_replace_once:Nnn \@begindocumenthook {
+    \mathchardef \std@minus \mathcode `\- \relax
+    \mathchardef \std@equal \mathcode `\= \relax
+  } {
+    \__lltxmath_set_mathchar:NN \std@minus \-
+    \__lltxmath_set_mathchar:NN \std@equal \=
+  }
+  \__lltxmath_patch:NNnnn \resetMathstrut@ \cs_set_nopar:Npn { } {
+    \setbox \z@ \hbox {
+      \mathchardef \@tempa \mathcode `\( \relax % \)
+      \def \@tempb ##1 "##2 ##3 { \the \textfont "##3 \char" }
+      \expandafter \@tempb \meaning \@tempa \relax
+    }
+    \ht \Mathstrutbox@ \ht \z@
+    \dp \Mathstrutbox@ \dp \z@
+  } {
+    \box_set_ht:Nn \Mathstrutbox@ {
+      \__lltxmath_char_dim:NN \fontcharht \( % \)
+    }
+    \box_set_dp:Nn \Mathstrutbox@ {
+      \__lltxmath_char_dim:NN \fontchardp \)
+    }
+  }
+  \__lltxmath_patch:NNnnn \subarray \cs_set:Npn { #1 } {
+    \vcenter
+    \bgroup
+    \Let@
+    \restore@math@cr
+    \default@tag
+    \baselineskip \fontdimen 10~ \scriptfont \tw@
+    \advance \baselineskip \fontdimen 12~ \scriptfont \tw@
+    \lineskip \thr@@ \fontdimen 8~ \scriptfont \thr@@
+    \lineskiplimit \lineskip
+    \ialign
+    \bgroup
+    \ifx c #1 \hfil \fi
+    $ \m@th \scriptstyle ## $
+    \hfil
+    \crcr
+  } {
+    \vcenter
+    \c_group_begin_token
+    \Let@
+    \restore@math@cr
+    \default@tag
+    \skip_set:Nn \baselineskip {
+      \luatexUmathstacknumup \scriptstyle
+      + \luatexUmathstackdenomdown \scriptstyle
+    }
+    \lineskip \luatexUmathstackvgap \scriptstyle
+    \lineskiplimit \lineskip
+    \ialign
+    \c_group_begin_token
+    \token_if_eq_meaning:NNT c #1 { \hfil }
+    \luatexUstartmath
+    \m@th
+    \scriptstyle
+    \luatexalignmark \luatexalignmark
+    \luatexUstopmath
+    \hfil
+    \crcr
+  }
+  \__lltxmath_patch:cNnnn { frac~ } \cs_set:Npn { #1 #2 } {
+    {
+      \begingroup #1 \endgroup \@@over #2
+    }
+  } {
+    {
+      \luatexUstack { \group_begin: #1 \group_end: \@@over #2 }
+    }
+  }
+  \__lltxmath_patch:NNnnn \@genfrac \cs_set_nopar:Npn {
+    #1 #2 #3 #4 #5
+  } {
+    {
+      #1 { \begingroup #4 \endgroup #2 #3 \relax #5 }
+    }
+  } {
+    {
+      #1 {
+        \luatexUstack {
+          \group_begin: #4 \group_end: #2 #3 \scan_stop: #5
+        }
+      }
+    }
+  }
+}
+\group_begin:
+\char_set_catcode_other:N \"
+\AtEndOfPackageFile * { amsopn } {
+  \__lltxmath_patch:NNnnn \newmcodes@ \cs_gset_nopar:Npn { } {
+    \mathcode `\' 39
+    \mathcode `\* 42
+    \mathcode `\. "613A
+    \ifnum \mathcode `\- = 45 ~ \else
+      \mathchardef \std@minus \mathcode `\- \relax
+    \fi
+    \mathcode `\- 45
+    \mathcode `\/ 47
+    \mathcode `\: "603A \relax
+  } {
+    \char_set_mathcode:nn { `\' } { 39 }
+    \char_set_mathcode:nn { `\* } { 42 }
+    \char_set_mathcode:nn { `\. } { "613A }
+    \int_compare:nNnF { \luatexUmathcodenum `\- } = { 45 } {
+      \__lltxmath_set_mathchar:NN \std@minus \-
+    }
+    \char_set_mathcode:nn { `\- } { 45 }
+    \char_set_mathcode:nn { `\/ } { 47 }
+    \char_set_mathcode:nn { `\: } { "603A }
+  }
+}
+\group_end:
+\luatexbase@ensure@primitive { crampeddisplaystyle }
+\luatexbase@ensure@primitive { crampedtextstyle }
+\luatexbase@ensure@primitive { crampedscriptstyle }
+\luatexbase@ensure@primitive { crampedscriptscriptstyle }
+\AtEndOfPackageFile * { mathtools } {
+  \__lltxmath_patch:NNnnn \MT_cramped_internal:Nn
+    \cs_set_nopar:Npn { #1 #2 } {
+    \sbox \z@ {
+      $
+      \m@th
+      #1
+      \nulldelimiterspace = \z@
+      \radical \z@ { #2 }
+      $
+    }
+    \ifx #1 \displaystyle
+      \dimen@ = \fontdimen 8 \textfont 3
+      \advance \dimen@ .25 \fontdimen 5 \textfont 2
+    \else
+      \dimen@ = 1.25 \fontdimen 8
+      \ifx #1 \textstyle
+        \textfont
+      \else
+        \ifx #1 \scriptstyle
+          \scriptfont
+        \else
+          \scriptscriptfont
+        \fi
+      \fi
+      3
+    \fi
+    \advance \dimen@ -\ht\z@
+    \ht\z@ = -\dimen@
+    \box\z@
+  } {
+    {
+      \use:c { luatexcramped \cs_to_str:N #1 } #2
+    }
+  }
+}
+\AtEndOfPackageFile * { icomma } {
+  \tl_replace_once:Nnn \@begindocumenthook {
+    \mathchardef \mathcomma \mathcode `\,
+  } {
+    \__lltxmath_set_mathchar:NN \mathcomma \,
+  }
+}
+\endinput
+%%
+%% End of file `lualatex-math.sty'.

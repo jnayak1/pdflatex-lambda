@@ -1,0 +1,16 @@
+                   The TeX Catalogue License Definitions: PD
+
+     ----------------------------------------------------------------------
+
+Public Domain Software
+
+   This is software that is not copyrighted. As public domain software you
+   can essentially do whatever you like with it. Please check the software's
+   license before using the software.
+
+   Further information about this type of license is avaiable from GNU and
+   general information is available about other Catalogue Licenses.
+
+     ----------------------------------------------------------------------
+
+   Last Modified 1999/04/13 15:03:42 Graham Williams, Togaware
