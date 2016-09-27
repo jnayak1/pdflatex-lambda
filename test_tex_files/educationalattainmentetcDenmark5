@@ -1,0 +1,417 @@
+ss[a4paper,12pt]{article}
+
+%this enables IPA characters for linguistics
+%\usepackage{tipa}
+
+%this changes the way citations look and how they are organized in the bibliography
+%\usepackage[authoryear, round]{natbib}
+%\bibliographystyle{apa-good-ampersand}
+
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+%enables the use of images
+\usepackage{graphicx}
+
+%enables hyperlinks
+\usepackage[colorlinks=false]{hyperref}
+
+%enables some special characters, needed for writing Scandinavian
+\usepackage[utf8]{inputenc}
+
+%fixes the margin
+\usepackage[margin=2.5cm]{geometry}
+
+%removes page number which PDF readers have anyway.
+\pagestyle{empty}
+
+%removes ligatures
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = * }
+
+%for making tables stay in place, use [H]
+\usepackage{float}
+
+%this makes it possible to split tabes over multiple pages
+\usepackage{longtable}
+
+\begin{document}
+\noindent
+\textit{Open Differential Psychology}\\
+Research article.\\
+Submitted April 22nd, 2014\\
+Published May 12th, 2014\\
+\\
+\begin{center}
+\textbf{{\Huge Educational attainment, income, use of social benefits, crime rate and the general socioeconomic factor among 70 immigrant groups in Denmark}}
+\end{center}
+\noindent\Large Emil O. W. Kirkegaard\footnote{Corresponding author: emil@emilkirkegaard.dk}\\
+\noindent\Large John Fuerst\\
+\\
+\normalsize\textbf{Abstract}\\
+We obtained data from Denmark for the largest 70 immigrant groups by country of origin. We show that three important socioeconomic variables are highly predictable from the Islam rate, IQ, GDP and height of the countries of origin. We further show that there is a general immigrant socioeconomic factor and that country of origin national IQs, Islamic rates, and GDP  strongly predict immigrant general  socioeconomic scores.\\
+
+\noindent\textbf{Keywords}: National IQs, group differences, country of origin, Denmark, immigration
+
+\section{Introduction}
+In our previous paper\cite{fuerstkirkegaard2014} we introduced the spatial transferability hypothesis, which is the proposition that when people migrate to other countries, they retain their traits, whether personality, cognitive or other. Regarding National IQs, a corollary of this  hypothesis is that the known correlates of \textit{g} are also retained such as average socioeconomic level. We have previously shown that the spatial transferability hypothesis holds with regards to fertility and crime rates in Denmark\cite{kirkegaard2014DK}, crime rates in Norway\cite{kirkegaard2014NO}, SAT and GPA scores at elite universities in the U.S., and PISA scores throughout the OCED \cite{JFuerst1,JFuerst2}. In this paper we examine new data from Denmark concerning educational level, income and use of social benefits.
+
+\section{Datasets and methods}
+We purchased three new datasets for Denmark from the official Danish statistics agency (Danmarks Statistik, http://dst.dk). All datasets concern the 71 largest immigrant groups by country of origin that one of us previously examined with respect to crime rates\cite{kirkegaard2014DK}. All datasets contain data from 2012 only. Dataset 1 contains information about the highest level of formal education reached by immigrant groups and is divided into age groups (15-19, 20-29, 30-39, 40-49, 50-59, $>$60). Dataset 2 contains the mean income levels per group by age groups. Dataset 3 contains the percentage of the groups who are on social benefits by age groups.
+
+Our analytic strategy was similar to that used in previous studies. First, we extracted the data of interest and imported it into SPSS where we performed the statistical analyses.  From the data files, we extracted:  mean income levels, the percentage who have advanced tertiary education ("lang videregående uddannelse"), the percentage who had only basic schooling ("grundskole"), and the percentage on social benefits ("offentlig forsørgelse").  This was done for each age group.    
+
+The predictor variables were: 1) Lynn and Vanhanen's national IQs as given in \cite{lynn2012intelligence} with an estimate of the former Yugoslavia's IQ from \cite{kirkegaard2013DK}, 2) national GDPs per capita from the International Monetary Fond (2013) via Wikipedia\cite{IMF,wiki:GDP}, 3) national rates of belief in Islam from Pew Research via Wikipedia\cite{Pew,wiki:islam}, 4) the average heights from Wikipedia\cite{wiki:heights}\footnote{As in previous studies, we picked the best and newest studies, and merged data for males and females using z-scores to obtain a sex-neutral average height for all available countries. See datafile for details. There is still a need for a meta-analysis that compiles average heights by country on a better basis than this.}.
+
+\section{Educational attainment}
+Correlational analysis for the proportion who have only basic schooling is shown in Table \ref{basic_school}, while Table \ref{tertiary_ed} shows the analysis for the proportion who have advanced tertiary degrees.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=\linewidth]{basic_schooling}
+\caption{Correlational matrix for predictors and basic schooling. The variable measures the proportion of an immigrant population who has attained only basic schooling.}\label{basic_school}
+\end{table}
+
+\begin{table}[H]
+\centering
+\includegraphics[width=\linewidth]{tertiary_ed}
+\caption{Correlational matrix for predictors and long tertiary education. The variable measures the proportion of an immigrant population who has attained tertiary education.}\label{tertiary_ed}
+\end{table}
+
+Regarding basic schooling, it is clear that age matters. First, at age 15-19 most people have not had enough time to finish secondary education and so clear patterns do not yet emerge. Second, the correlations are low for the older groups probably because they immigrated too late to the country and so were not able to take advantage of the Danish educational system which presumably in many cases is of higher quality than the ones in the home countries. The picture is much the same with regards to tertiary degree rates; regarding this variable, there was no data for the first age group as no one in that age range was old enough to attain a tertiary degree.
+
+From the correlations it was apparent that there might be a general education factor. We performed principle component analysis (PCA) to extract latent variables. The component loadings are shown in Table \ref{ed_PCA}. The first component was a large general factor while PC2 was not readily interpretable; PC2 probably represents a nonsense factor loaded with statistical noise. Kaiser-Meyer-Olkin (KMO) was .842, very good. Bertlett's test was p<.000, good.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=130px]{ed_PCA}
+\caption{Factor loadings of income variables.}\label{ed_PCA}
+\end{table}
+
+The correlations with the predictors are shown in Table \ref{g_ed_att}. All four predictors performed similarly for the PC1 variable which is surprising given that height seems to have no conceptual relevance to education. Correlations with PC2 were in the same direction but smaller.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=300px]{g_ed_att}
+\caption{Predictors and the latent educational attainment variable.}\label{g_ed_att}
+\end{table}
+
+\section{Income}
+The correlations with the predictors and with average income levels are shown in Table \ref{income}. It is apparent that early income levels are not very predictable yet that later incomes are. Oddly national IQs  did not predict income after age 60, but GDP and Islam continued to have sizable correlations. As might be expected from the conceptual link, GDP was the strongest predictor of income levels, but height also performed well.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=\linewidth]{income}
+\caption{Predictors and income.}\label{income}
+\end{table}
+
+As before we did a PCA to extract latent variables. 2 components were extracted. The first one was interpreted as a latent middle adulthood income variable with high loadings on income after age 30. The second was interpreted as an early income factor indexing the incomes of those who left school early to earn money. Factor loadings are shown in Table \ref{PCA_income}. KMO was .645, okay. Bartlett's test was p<.000, good. Correlations with predictors are shown in Table \ref{income2}.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=130px]{PCA_income}
+\caption{Factor loadings of income variables.}\label{PCA_income}
+\end{table}
+
+\begin{table}[H]
+\centering
+\includegraphics[width=300px]{income2}
+\caption{Predictors and the latent income variables.}\label{income2}
+\end{table}
+
+While latent early income was not very predictable, latent adult income was highly so. Perhaps not surprisingly, national GDP was the strongest correlate of the latent migrant income variable.
+
+\section{Use of social benefits}
+Social benefits in Denmark include both a stipend for students and various payouts for people who for some reason cannot or won't work and receives money from the state to support themselves. The supplementary material has a detailed description of this variable (in Danish).
+
+Like before, we performed a correlation analysis with the variables for each age group and the predictors. It is shown in Table \ref{social_benefits}.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=\linewidth]{social_benefits}
+\caption{Predictors and use of social benefits.}\label{social_benefits}
+\end{table}
+
+Height is not a good predictor of the use of social benefits, IQ and GDP were both good predictors and Islam came out ahead again. The variable intercorrelations were high indicating a latent variable. We used PCA to extract latent variables. Loadings are shown in \ref{social_PCA}. 
+
+\begin{table}[H]
+\centering
+\includegraphics[width=130px]{social_PCA}
+\caption{Factor loadings for social benefits variables.}\label{social_PCA}
+\end{table}
+
+PCA resulted in only one factor. KMO was .817, very good. Bartlett's test was p<.000, good. The correlations with predictors are shown in Table \ref{social2}. Islam was a very good predictor of use of social benefits with national IQ and GDP coming in about equally at second. Height was the weakest again.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=300px]{social2}
+\caption{Predictors and the latent social benefit variables.}\label{social2}
+\end{table}
+
+\section{General socioeconomic factor}
+In a previous paper \cite{kirkegaard2014NO}, one of us speculated that there might be an immigrant general socioeconomic factor. That would be the case if there were correlations between the various socioeconomic variables. It is not immediately obvious that this will be true. Perhaps some immigrant groups have high relatively high crime rates but also have relatively high average incomes (like men compared with women). In the Norwegian data, this idea could not be properly tested because there were only two different socioeconomic variables making PCA impossible.
+
+The present study has adequate data to answer the question. We ran a PCA on all the manifest variables previously mentioned as well as the two crime variables for age groups 15-19 and 20-29 from the previous study.  The results of the PCA are shown in Table \ref{socioecon}. PC1 was a large general factor while the other factors were not clearly interpretable. KMO was .728, good, and Bartlett's was p<.000, good.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=200px]{socioecon_PCA}
+\caption{Factor loadings of all socioeconomic variables.}\label{socioecon_PCA}
+\end{table}
+
+Table \ref{socioecon} shows the predictors' correlations with the general socioeconomic factor. Islam was a very good predictor while IQ and GDP were merely good and height still good but somewhat worse. However, due to the number of missing values for some countries, we reran the PCA without the four variables that had the lowest sample size (income 15-19, social benefits 15-19, social benefits $>$60). This increased the sample size from 31 to 63. The correlation between the two components was .999 so clearly the removed variables were not important. Correlations with predictors did not change much with the new PC (also shown in Table \ref{socioecon}). The appendix has a list of the 63 countries and their factor scores.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=300px]{socioecon}
+\caption{Predictors and the general socioeconomic latent variable.}\label{socioecon}
+\end{table}
+
+\section{Multiple regression}
+We tested whether predictors could be combined to improve the prediction of the general socioeconomic factor with multiple regression. Results are shown in Table \ref{multiple}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Model}               & \textbf{R}    & \textbf{R$^{2}$}   & \textbf{R$^{2}$ adjusted} \\ \hline
+Islam+IQ+GDP+height & .844 & .712 & .685        \\ \hline
+Islam+IQ+GDP        & .845 & .714 & .698        \\ \hline
+Islam+IQ            & .825 & .680 & .669        \\ \hline
+Islam+GDP           & .845 & .713 & .703        \\ \hline
+IQ+GDP+height       & .735 & .540 & .508        \\ \hline
+IQ+GDP              & .710 & .505 & .487        \\ \hline
+IQ+height           & .628 & .395 & .368        \\ \hline
+GDP+height          & .734 & .539 & .518        \\ \hline
+IQ					& .583 & .340 & 			\\ \hline
+GDP					& .705 & .497 & 			\\ \hline
+Islam				& .776 & .601 &				\\ \hline
+\end{tabular}
+\caption{Multiple regression results.}\label{multiple}
+\end{table}
+
+Like previously found in the studies of crime in Denmark and Norway\cite{kirkegaard2014DK,kirkegaard2014NO}, IQ and GDP did not show independent effects. This is to be expected if there is a strong causal relationship between the two (in either direction or both). Some regression plots of interest are shown in Figures \ref{regression_islam} - \ref{regression_islam_GDP}. The plots show the general socioeconomic factor and various predictors which are mentioned in the captions below the plots.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_islam}
+\caption{Regression plot for Islam on the general socioeconomic factor.}\label{regression_islam}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_IQ}
+\caption{Regression plot for IQ on the general socioeconomic factor.}\label{regression_IQ}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_GDP}
+\caption{Regression plot for GDP on the general socioeconomic factor.}\label{regression_GDP}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_islam_iq}
+\caption{Regression plot for Islam+IQ on the general socioeconomic factor.}\label{regression_islam_iq}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_islam_GDP}
+\caption{Regression plot for Islam+GDP on the general socioeconomic factor.}\label{regression_islam_GDP}
+\end{figure}
+
+\section{Partial correlations}
+Another way to test the robustness of two variables is to calculate the partial correlations controlling for other variables. Specifically, we wanted to know whether the validity of IQ was due to Islamic countries having low IQs or whether it had independent validity. Results are shown in Table \ref{partials}. The predictive validity of national IQs and GDPs cannot be explained as being wholly due to the indirect effects of Islam nor can Islam's predictive validity be explained as being wholly due to IQ and GDP.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Predictor} & \textbf{Controlling for} & \textbf{r with general socioeconomic factor} \\ \hline
+IQ                 & Islam                    & -0.487                                       \\ \hline
+GDP                & Islam                    & -0.592                                       \\ \hline
+Islam              & IQ, GDP                  & 0.67                                         \\ \hline
+\end{tabular}
+\caption{Partial correlations.}\label{partials}
+\end{table}
+
+\section{Pearson vs. Spearman correlations}
+We note that while other predictors tended to outperform national IQs with Pearson correlations, the Spearman correlations were systematically higher often making national IQs the best predictor. The scatter plots do seem to indicate some non-linearity for IQ as the worst performing groups have IQs in the mid 80s. 
+
+\section{The predictive ability of Islam}
+A reviewer suggested that Islam's predictive ability is due to other facts having to do with the MENAP countries (Middle East, North Africa, Pakistan\cite{wiki:MENAP}).
+
+There are different ways to test this hypothesis. One idea is to limit the sample to MENAP and non-MENAP sets to see whether Islam has predictive ability in these. It turns out that it does as seen in Figure \ref{MENAP}. The r's for MENAP and non-MENAP are .314 (N=13) and .593 (=48) respectively.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{MENAP}
+\caption{Regression plot for Islam in MENAP and non-MENAP countries for the general socioeconomic factor.}\label{MENAP}
+\end{figure}
+
+One can also try the same but for other regions. Below are regression plots in Figures \ref{regression_islam_europeans} and \ref{islam_SSA} show that Islam is still a predictor of worse socioeconomic performance in Denmark when looking European vs. non-European countries (r's = .688 and .700, N's = 30 and 31) and sub-Saharan countries vs. non-sub-Saharan countries (r's = .914 and .776, N's = 7 and 54).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{regression_islam_europeans}
+\caption{Regression plot for Islam on the general socioeconomic factor for Europeans vs. non-Europeans.}\label{regression_islam_europeans}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{islam_SSA}
+\caption{Regression plot for Islam on the general socioeconomic factor for sub-Saharan Africans vs. non-sub-Saharan Africans.}\label{islam_SSA}
+\end{figure}
+
+Another idea is to code countries by region and then enter this as well into multiple regression and see how the beta-coefficients come out. If there is something special about the MENAP countries, then the region variable will come out with a sizable co-efficient. Results are shown in Table \ref{regions}. As one can see, the variable for MENAP is not sizable nor is it close to significance, and neither are the other regional variables.
+
+\begin{table}[H]
+\centering
+\includegraphics[width=300px]{regions}
+\caption{Multiple regression with world regions and Islam on the general socioeconomic factor in Denmark.}\label{regions}
+\end{table}
+
+So it seems that the predictive ability of Islam is quite robust for this dataset.
+
+\section{Discussion and conclusion}
+We have shown that how well an immigrant group does in 4 different areas of society is to a high degree predictable from country of origin factors. Furthermore, we have shown that these can be seen as part of a more general socioeconomic factor that broadly measures how well a group does in Denmark.
+
+One might wonder what the effects of migrant generation are. The datasets employed here do not break the variables down by immigrant generation. However, the reports \textit{Immigrants in Denmark 2013} (\textit{Invandrere i Danmark 2013\cite{DST:indv}}) and \textit{PISA Ethnic 2012} (\textit{PISA Etnisk 2012}\cite{PISA_etnisk2012}) do break down some variables per generation (first and second). The first report does not group immigrants by their country of origin, but by macro-origin: western vs. non-western. Perhaps surprisingly, crime rates are higher in the second generation as shown in Figure \ref{generation_crime}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{generation_crime}
+\caption{Crime rate for men per macro-origin, generation and age group, 2012. Adapted from Figure 5.3 in \cite{DST:indv}.}\label{generation_crime}
+\end{figure}
+
+However, employment rate and percentage on social benefits improves from the first to second generation without reaching native levels see Figure \ref{employmentrate} and \ref{offentligforsoerg}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{employmentrate}
+\caption{Employment rate by macro-origin and generation. Adapted from Figure 2.3 in \cite{DST:indv}.}\label{employmentrate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=300px]{offentligforsoerg}
+\caption{Percentage on social benefits by macro-origin, age group and generation. Adapted from Figure 4.1 in \cite{DST:indv}}\label{offentligforsoerg}
+\end{figure}
+
+In the second report, average PISA scores by immigrant generation are reported as shown in Table \ref{PISA_generation}. The scores improve about 20 points from first to second generation, but are still 61 points below the scores of children of Danish origin. This should be seen in light of the estimated IQ of 89.9 for the total immigrant population in Demark\cite{kirkegaard2013DK}, which is about .67 standard deviations lower than Native Danish IQ. The PISA standard deviation in Denmark is around 80, so the standardized difference between second gen. immigrants and Danish origin natives is about .76.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Origin}                 & \textbf{PISA Score} \\ \hline
+All origins            & 500        \\ \hline
+Danish origin          & 508        \\ \hline
+First gen. immigrants  & 428        \\ \hline
+Second gen. immigrants & 447        \\ \hline
+\end{tabular}
+\caption{PISA scores by generation and origin. Adapted from Table 2.2 in \cite{PISA_etnisk2012}}\label{PISA_generation}
+\end{table}
+
+There is not yet reliable data for third generation immigrants due to small samples\cite{DST:indv}.
+
+\subsection{Future studies}
+Future studies should replicate the analyses done here, especially with regards to the existence of an immigrant general socioeconomic factor. It is known that Norway has the needed data, so it should be possible to buy them and replicate the analysis.
+
+Further analysis should check whether Islam predicts performance in countries very different from Denmark (a mostly atheistic, nominally Christian country), e.g. Asian or South American countries.
+
+One of our findings was that national rates of belief in Islam robustly predicted poor migrant socioeconomic outcomes.  One interpretation of this association is simply that Islamic belief is directly causally related to poorer outcomes.  This need not be the case, or course.  Regarding crime, for example, a reviewer suggested another explanation. In most Muslim societies, the state has less effectively monopolized the use of violence, with the result that every adult male is expected to use violence as a legitimate way to resolve personal disputes and to defend "honor" or "face." Muslim immigrants thus tend to be more willing to commit violent acts that are criminalized in Western societies, particularly if these acts are targeted against non-kin. We were unable to test this and other interesting hypotheses and so remain agnostic as to the cause of the associations. 
+
+\subsection{Error sources}
+The crime data used spanned multiple years (2000-2012) while the three new datasets concern 2012 data only. This might introduce error.
+
+Lynn and Vanhanen's national IQs, while overall well validated,  are estimates based on data from numerous years and are probably not exactly representative of some of the various countries' current average IQs.
+
+Given our present data set, there is no way to detect or correct for selective migration which can both increase and decrease correlations. 
+
+Principle components analysis tends to overestimate the amount of variance explained by the latent trait, so the percents explained might be slightly inflated relative to the values which would be derived using other methods. \cite{jensen1994good}.
+
+\section{Acknowledgment and funding}
+We thank Julia Reenberg from Statistics Denmark (Danmarks Statistik) for help with obtaining the data.
+
+Richard Lynn supplied a research grant of 12,500 DKK which was paid to Statistics Denmark to obtain the datasets. We are grateful and because of this we dedicate this paper to him.
+
+An earlier version of this paper had incorrectly stated both in the title and abstract that we had data for the 71 largest immigrant groups, whereas the true number is 70 because people whose country of origin is Denmark is not an immigrant group.
+
+All data and other supplementary material is available at the \href{https://osf.io/n79ab/files/}{Open Science Framework repository}.
+
+\bibliography{refs}
+
+\section{Appendix - list of countries of origin by general socioeconomic latent variable in Denmark}
+Note that the factor is negatively coded, so those with the highest score are those who perform the worst.
+
+\begin{longtable}{|l|l|}
+\hline
+\textbf{Country}              & \textbf{Score on the general socioeconomic factor} \\ \hline
+Lebanon              & 2.06574                                   \\ \hline
+Somalia              & 2.06059                                   \\ \hline
+Turkey               & 1.94332                                   \\ \hline
+Syria                & 1.84938                                   \\ \hline
+Yugoslavia, Republic & 1.62137                                   \\ \hline
+Iraq                 & 1.54085                                   \\ \hline
+Morocco              & 1.44991                                   \\ \hline
+Yugoslavia           & 1.43415                                   \\ \hline
+Jordan               & 1.37048                                   \\ \hline
+Afghanistan          & 1.15156                                   \\ \hline
+Tunisia              & 1.12141                                   \\ \hline
+Pakistan             & 1.08631                                   \\ \hline
+Algeria              & 0.95893                                   \\ \hline
+Thailand             & 0.95542                                   \\ \hline
+Sri Lanka            & 0.95115                                   \\ \hline
+Macadonia            & 0.86555                                   \\ \hline
+Vietnam              & 0.83137                                   \\ \hline
+Bosnia-Hercegovina   & 0.78319                                   \\ \hline
+Uganda               & 0.58149                                   \\ \hline
+Iran                 & 0.57854                                   \\ \hline
+Ethiopia             & 0.57487                                   \\ \hline
+Tanzania             & 0.41146                                   \\ \hline
+Egypt                & 0.28731                                   \\ \hline
+Croatia              & 0.26194                                   \\ \hline
+Kenya                & 0.19122                                   \\ \hline
+Philippines          & 0.16204                                   \\ \hline
+Indonesia            & 0.09543                                   \\ \hline
+Israel               & 0.08693                                   \\ \hline
+Ghana                & 0.00465                                   \\ \hline
+Chile                & -0.02897                                  \\ \hline
+Brazil               & -0.24962                                  \\ \hline
+Soviet Union         & -0.31177                                  \\ \hline
+Poland               & -0.40592                                  \\ \hline
+India                & -0.51208                                  \\ \hline
+Latvia               & -0.53251                                  \\ \hline
+Portugal             & -0.54386                                  \\ \hline
+China                & -0.5447                                   \\ \hline
+Iceland              & -0.54589                                  \\ \hline
+Romania              & -0.61938                                  \\ \hline
+Argentina            & -0.64445                                  \\ \hline
+Greece               & -0.71416                                  \\ \hline
+Ukraine              & -0.72463                                  \\ \hline
+Russia               & -0.72804                                  \\ \hline
+United Kingdom       & -0.751                                    \\ \hline
+South Africa         & -0.79153                                  \\ \hline
+Spain                & -0.81968                                  \\ \hline
+Italy                & -0.83756                                  \\ \hline
+Bulgaria             & -0.85429                                  \\ \hline
+Hungary              & -0.8639                                   \\ \hline
+Germany              & -0.88794                                  \\ \hline
+Lithuania            & -0.90211                                  \\ \hline
+Sweden               & -0.90745                                  \\ \hline
+Japan                & -0.90857                                  \\ \hline
+Norway               & -0.9214                                   \\ \hline
+Finland              & -1.02674                                  \\ \hline
+Netherlands          & -1.07091                                  \\ \hline
+Australia            & -1.10136                                  \\ \hline
+Austria              & -1.10213                                  \\ \hline
+Switzerland          & -1.12573                                  \\ \hline
+Canada               & -1.20867                                  \\ \hline
+France               & -1.21555                                  \\ \hline
+Belgium              & -1.26163                                  \\ \hline
+USA                  & -1.61244                                  \\ \hline
+\end{longtable}
+
+\end{document}
