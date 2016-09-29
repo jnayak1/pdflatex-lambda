@@ -1,0 +1,5 @@
+# macros to keep trees in texlive consistent
+%_texmf_main     /usr/share/texlive/texmf
+%_texmf_vendor   /usr/share/texlive/texmf
+/var/lib/texmf      /var/lib/texmf
+%_texmf_conf     /usr/share/texlive/texmf-config

@@ -1,0 +1,36 @@
+Ideas which I may implement in some release regarding jbib.c:
+
+  - routine which prepares incompletely decoded images for Xlib
+
+  - use more efficient resolution reduction code suggested by
+    Dr. Klaus Bartz <bartzkau@kou3.ina.de>
+
+  - investigate whether there is a standard way of embedding JBIG
+    into TIFF and implement it (see also RFC 2301)
+
+  - test for and eliminate warning messages from compilers
+    other than GCC
+
+  - multichannel (e.g., RGB) support, PPM support
+
+The following wishes may have become less important since the release
+of jbig85.c:
+
+  - compile-time option to remove progressive encoding and
+    resolution-reduction support (in the interest of reducing code
+    size and attack surface for software patent lawyers)
+
+  - investigate how to best deal with broken BIEs that contain
+    multiple NEWLEN marker segments, which are not permitted by ITU-T
+    T.85, but which have been observed coming from some fax machines;
+    possible options for jbg_newlen(): use first, last, or minimum
+    value
+
+  - version of jbg_newlen() for dealing with BIEs that are split
+    into several blocks
+
+  - call-back function for progress meter
+
+Ideas which I may implement in some future release regarding jbig85.c:
+
+  - man pages for pbmtojbg85 and jbgtopbm85

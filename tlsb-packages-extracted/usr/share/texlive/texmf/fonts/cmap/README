@@ -1,0 +1,14 @@
+Copyright 2008 TeX Users Group.
+You may freely use, modify and/or distribute this file.
+
+In the pTeX distribution, there is also a ptetex subdirectory here, with
+the files Adobe-Japan1-UCS2, H, UniCNS-UTF16-H, and more, which come
+from Adobe.
+
+Since they are under a nonfree license, they are not included here, but
+they can be found in the GPL Ghostscript distribution, or via Adobe's
+"CMaps for PDF 1.4 CJK Fonts" at
+http://partners.adobe.com/public/developer/font/index.html#pcfi,
+among other places.
+
+This is unrelated to the cmap LaTeX package.
