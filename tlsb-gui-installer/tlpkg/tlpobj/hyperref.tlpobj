@@ -1,0 +1,99 @@
+name hyperref
+category Package
+revision 41539
+shortdesc Extensive support for hypertext in LaTeX
+longdesc The hyperref package is used to handle cross-referencing
+longdesc commands in LaTeX to produce hypertext links in the document.
+longdesc The package provides backends for the \special set defined for
+longdesc HyperTeX DVI processors; for embedded pdfmark commands for
+longdesc processing by Acrobat Distiller (dvips and Y&Y's dvipsone); for
+longdesc Y&Y's dviwindo; for PDF control within pdfTeX and dvipdfm; for
+longdesc TeX4ht; and for VTeX's pdf and HTML backends. The package is
+longdesc distributed with the backref and nameref packages, which make
+longdesc use of the facilities of hyperref. The package depends on the
+longdesc author's kvoptions, ltxcmds and refcount packages.
+containersize 107852
+containerchecksum 889abeaf1fb564011665ca0b70b7b8e1a737ede436246464840439bacc9e0ddc71ba7236114e1ee738f1f43f4b80469220f0725af3c4e7be63b3a63c37c82990
+doccontainersize 3368436
+doccontainerchecksum f7ede2dc4ee7a062b82ff2efcb760a47a4cfe6b52f696103cb19ac59d7137275660df8249c17c0878feb4c25a2d9caa4a3777e895827170bf88d27ad33baac2d
+srccontainersize 288164
+srccontainerchecksum 7d2f3ef559f5854e2910f69d5b36fddc8d42888550153a1e2ad88cca1db2f41fbea7c029532d619cd7e85112b0c1dd1739cddf5af0bd83c4c82b3472bf4a2df2
+srcfiles size=342
+ texmf-dist/source/latex/hyperref/backref.dtx
+ texmf-dist/source/latex/hyperref/bmhydoc.sty
+ texmf-dist/source/latex/hyperref/doc/fdl.tex
+ texmf-dist/source/latex/hyperref/doc/manual.tex
+ texmf-dist/source/latex/hyperref/doc/options.tex
+ texmf-dist/source/latex/hyperref/hyperref.dtx
+ texmf-dist/source/latex/hyperref/hyperref.ins
+ texmf-dist/source/latex/hyperref/nameref.dtx
+ texmf-dist/source/latex/hyperref/psdmapshortnames.pl
+ texmf-dist/source/latex/hyperref/test/Makefile
+ texmf-dist/source/latex/hyperref/test/bit.tex
+ texmf-dist/source/latex/hyperref/test/files.xml
+ texmf-dist/source/latex/hyperref/test/hog.eps
+ texmf-dist/source/latex/hyperref/test/hog.pdf
+ texmf-dist/source/latex/hyperref/test/phys1.jpg
+ texmf-dist/source/latex/hyperref/test/phys2.jpg
+ texmf-dist/source/latex/hyperref/test/picture.eps
+ texmf-dist/source/latex/hyperref/test/picture.pdf
+ texmf-dist/source/latex/hyperref/test/picture.png
+ texmf-dist/source/latex/hyperref/test/test-bm-pu-licr.tex
+ texmf-dist/source/latex/hyperref/test/test0.tex
+ texmf-dist/source/latex/hyperref/test/test1.tex
+ texmf-dist/source/latex/hyperref/test/test2.tex
+ texmf-dist/source/latex/hyperref/test/test3.tex
+ texmf-dist/source/latex/hyperref/test/test4.tex
+ texmf-dist/source/latex/hyperref/test/test6.tex
+ texmf-dist/source/latex/hyperref/test/test7.tex
+ texmf-dist/source/latex/hyperref/test/test8.tex
+ texmf-dist/source/latex/hyperref/test/testams.tex
+ texmf-dist/source/latex/hyperref/test/testbib.bbl
+ texmf-dist/source/latex/hyperref/test/testbib.bib
+ texmf-dist/source/latex/hyperref/test/testbib.tex
+ texmf-dist/source/latex/hyperref/test/testbmgl.tex
+ texmf-dist/source/latex/hyperref/test/testbmu.tex
+ texmf-dist/source/latex/hyperref/test/testbookmark.tex
+ texmf-dist/source/latex/hyperref/test/testfor2.tex
+ texmf-dist/source/latex/hyperref/test/testform.tex
+ texmf-dist/source/latex/hyperref/test/testinfo.tex
+ texmf-dist/source/latex/hyperref/test/testnb.tex
+ texmf-dist/source/latex/hyperref/test/testoz.tex
+ texmf-dist/source/latex/hyperref/test/testslide.tex
+ texmf-dist/source/latex/hyperref/test/testurl.bbl
+ texmf-dist/source/latex/hyperref/test/testurl.bib
+ texmf-dist/source/latex/hyperref/test/testurl.tex
+runfiles size=235
+ texmf-dist/tex/latex/hyperref/backref.sty
+ texmf-dist/tex/latex/hyperref/hdvipdfm.def
+ texmf-dist/tex/latex/hyperref/hdvips.def
+ texmf-dist/tex/latex/hyperref/hdvipson.def
+ texmf-dist/tex/latex/hyperref/hdviwind.def
+ texmf-dist/tex/latex/hyperref/hluatex.def
+ texmf-dist/tex/latex/hyperref/hpdftex.def
+ texmf-dist/tex/latex/hyperref/htex4ht.cfg
+ texmf-dist/tex/latex/hyperref/htex4ht.def
+ texmf-dist/tex/latex/hyperref/htexture.def
+ texmf-dist/tex/latex/hyperref/hvtex.def
+ texmf-dist/tex/latex/hyperref/hvtexhtm.def
+ texmf-dist/tex/latex/hyperref/hvtexmrk.def
+ texmf-dist/tex/latex/hyperref/hxetex.def
+ texmf-dist/tex/latex/hyperref/hylatex.ltx
+ texmf-dist/tex/latex/hyperref/hyperref.sty
+ texmf-dist/tex/latex/hyperref/hypertex.def
+ texmf-dist/tex/latex/hyperref/minitoc-hyper.sty
+ texmf-dist/tex/latex/hyperref/nameref.sty
+ texmf-dist/tex/latex/hyperref/nohyperref.sty
+ texmf-dist/tex/latex/hyperref/ntheorem-hyper.sty
+ texmf-dist/tex/latex/hyperref/pd1enc.def
+ texmf-dist/tex/latex/hyperref/pdfmark.def
+ texmf-dist/tex/latex/hyperref/psdextra.def
+ texmf-dist/tex/latex/hyperref/puarenc.def
+ texmf-dist/tex/latex/hyperref/puenc.def
+ texmf-dist/tex/latex/hyperref/puvnenc.def
+ texmf-dist/tex/latex/hyperref/xr-hyper.sty
+catalogue-ctan /macros/latex/contrib/hyperref
+catalogue-date 2016-06-25 04:55:24 +0200
+catalogue-license lppl
+catalogue-topics hyper pdf-feat
+catalogue-version 6.83q

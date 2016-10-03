@@ -1,0 +1,13 @@
+name texlive-docindex
+category TLCore
+revision 42189
+shortdesc top-level TeX Live doc.html, etc.
+longdesc These files are regenerated as needed, which is often, so we
+longdesc make them a separate package.  See the tl-update-auto script
+longdesc for the process.
+containersize 109876
+containerchecksum d04781d7c20ab6e3ff1a871b09279f49a638456c720ce179a35cbbb707d64a128d2ae232c7f5a1a4da9d9be33b594753b58faae659aeb0d5dd259a470259883b
+doccontainersize 116640
+doccontainerchecksum 27de860d2d5b6b1072be36b5b8bc620822a04a01b50722373c5abe484fa4b4f1ffb26d228240817e5dd008bfec76bac0ddc2f4bdd9110455fa064d728272c68d
+runfiles size=270
+ texmf-dist/scripts/texlive/var/texcatalogue.keywords

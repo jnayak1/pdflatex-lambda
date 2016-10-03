@@ -1,0 +1,53 @@
+name amsmath
+category Package
+revision 41561
+catalogue latex-amsmath
+shortdesc AMS mathematical facilities for LaTeX
+longdesc The package provides the principal packages in the AMS-LaTeX
+longdesc distribution. It adapts for use in LaTeX most of the
+longdesc mathematical features found in AMS-TeX; it is highly
+longdesc recommended as an adjunct to serious mathematical typesetting
+longdesc in LaTeX. When amsmath is loaded, AMS-LaTeX packages amsbsy
+longdesc (for bold symbols), amsopn (for operator names) and amstext
+longdesc (for text embedded in mathematics) are also loaded. amsmath is
+longdesc part of the LaTeX required distribution; however, several
+longdesc contributed packages add still further to its appeal; examples
+longdesc are empheq, which provides functions for decorating and
+longdesc highlighting mathematics, and ntheorem, for specifying theorem
+longdesc (and similar) definitions.
+containersize 29524
+containerchecksum 0649deafe8bf3bf7e7a493a01c83e7016ef8cc29064f267c1b9c0b6548fd6f4d94b6c0c4a32911ab3b960594f2c83664f3910819b8513fe634cace1deb79b390
+doccontainersize 2241396
+doccontainerchecksum 7165b6a53ca6d6b97f6f6eb4ad86a948ff5910adab3c87724b14b1ae7bc96a547e25de6663a65cce4f5065bdba54833c8a732295ba2126c0f4b950c30dee1d98
+srccontainersize 62496
+srccontainerchecksum 3d82051a3b6785719fe72c7b308bb447bb35ac1046bff0f545e605796023cbb59ca113997c3b7caec6af1e68f9376b5019adcec78b65c852edba8e71fe357066
+srcfiles size=77
+ texmf-dist/source/latex/amsmath/amsbsy.dtx
+ texmf-dist/source/latex/amsmath/amsbsy.ins
+ texmf-dist/source/latex/amsmath/amscd.dtx
+ texmf-dist/source/latex/amsmath/amscd.ins
+ texmf-dist/source/latex/amsmath/amsgen.dtx
+ texmf-dist/source/latex/amsmath/amsgen.ins
+ texmf-dist/source/latex/amsmath/amsmath.dtx
+ texmf-dist/source/latex/amsmath/amsmath.ins
+ texmf-dist/source/latex/amsmath/amsopn.dtx
+ texmf-dist/source/latex/amsmath/amsopn.ins
+ texmf-dist/source/latex/amsmath/amstext.dtx
+ texmf-dist/source/latex/amsmath/amstext.ins
+ texmf-dist/source/latex/amsmath/amsxtra.dtx
+ texmf-dist/source/latex/amsmath/amsxtra.ins
+runfiles size=48
+ texmf-dist/tex/latex/amsmath/amsbsy.sty
+ texmf-dist/tex/latex/amsmath/amscd.sty
+ texmf-dist/tex/latex/amsmath/amsgen.sty
+ texmf-dist/tex/latex/amsmath/amsmath.sty
+ texmf-dist/tex/latex/amsmath/amsopn.sty
+ texmf-dist/tex/latex/amsmath/amstex.sty
+ texmf-dist/tex/latex/amsmath/amstext.sty
+ texmf-dist/tex/latex/amsmath/amsxtra.sty
+catalogue-also nath mathtools
+catalogue-ctan /macros/latex/required/amsmath
+catalogue-date 2016-06-24 19:18:15 +0200
+catalogue-license lppl1.3
+catalogue-topics maths
+catalogue-version 2.15b

@@ -1,0 +1,25 @@
+name graphics-def
+category Package
+revision 41879
+shortdesc Colour and graphics option files
+longdesc This bundle is a combined distribution consisting of dvips.def,
+longdesc pdftex.def, luatex.def, xetex.def, dvipdfmx.def, and
+longdesc dvisvgm.def driver option files for the LaTeX graphics and
+longdesc color packages. It is hoped that by combining their source
+longdesc repositories at https://github.com/latex3/graphics-def it will
+longdesc be easier to coordinate updates.
+containersize 23900
+containerchecksum d4688967838a4725dd1a5f7673d99f929057efc3933032ade37c8266e885e009eb30f766286dd406f3e402f524b7b9340e34fd2e1402e3c69647fc137192b9d1
+doccontainersize 632
+doccontainerchecksum 5b7cc46e05d7c12e801da9fb39769750893af4d058024957837dfba6fbe8a006c112e4293116796b16b942f3c237ad922a186c13bb4ea32ee155dd6fa6768194
+runfiles size=38
+ texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+ texmf-dist/tex/latex/graphics-def/dvips.def
+ texmf-dist/tex/latex/graphics-def/dvisvgm.def
+ texmf-dist/tex/latex/graphics-def/luatex.def
+ texmf-dist/tex/latex/graphics-def/pdftex.def
+ texmf-dist/tex/latex/graphics-def/xetex.def
+catalogue-ctan /macros/latex/contrib/graphics-def
+catalogue-date 2016-08-17 10:11:36 +0200
+catalogue-license lppl
+catalogue-topics graphics-drv

@@ -1,0 +1,52 @@
+name graphics
+category Package
+revision 41688
+catalogue latex-graphics
+shortdesc The LaTeX standard graphics bundle
+longdesc This is a collection of LaTeX packages for: producing colour
+longdesc including graphics (eg PostScript) files rotation and scaling
+longdesc of text in LaTeX documents. It comprises the packages color,
+longdesc graphics, graphicx, trig, epsfig, keyval, and lscape.
+depend graphics-cfg
+containersize 14168
+containerchecksum dfa6e5b55471af401196ab17899a416d9646806e544990eef542e7df588cf4fe7c42a93191cfc6109039569c2fdfc4e084ff8af41c74744a46a255b5ceca1d5f
+doccontainersize 1983820
+doccontainerchecksum cd466cbaf714842ee879172cd81c314c710edcde255baaf34b0de3014b9ea3b069f115f942a7565f8636c65a41c64beb59c67dbd7121a32423a813c73109bcc1
+srccontainersize 50000
+srccontainerchecksum e936b7080ba224c1af21d26bb80f88ce89d8c9235d049f9aa853f2b561299afe623aa33213164f5d0ac39fbcf6198699d0041d75d7f7833772f1f7014b07725b
+srcfiles size=61
+ texmf-dist/source/latex/graphics/color.dtx
+ texmf-dist/source/latex/graphics/drivers.dtx
+ texmf-dist/source/latex/graphics/epsfig.dtx
+ texmf-dist/source/latex/graphics/graphics-drivers.ins
+ texmf-dist/source/latex/graphics/graphics.dtx
+ texmf-dist/source/latex/graphics/graphics.ins
+ texmf-dist/source/latex/graphics/graphicx.dtx
+ texmf-dist/source/latex/graphics/keyval.dtx
+ texmf-dist/source/latex/graphics/lscape.dtx
+ texmf-dist/source/latex/graphics/rotating.dtx
+ texmf-dist/source/latex/graphics/trig.dtx
+runfiles size=30
+ texmf-dist/tex/latex/graphics/color.sty
+ texmf-dist/tex/latex/graphics/dvipdf.def
+ texmf-dist/tex/latex/graphics/dvipsnam.def
+ texmf-dist/tex/latex/graphics/dvipsone.def
+ texmf-dist/tex/latex/graphics/dviwin.def
+ texmf-dist/tex/latex/graphics/emtex.def
+ texmf-dist/tex/latex/graphics/epsfig.sty
+ texmf-dist/tex/latex/graphics/graphics.sty
+ texmf-dist/tex/latex/graphics/graphicx.sty
+ texmf-dist/tex/latex/graphics/keyval.sty
+ texmf-dist/tex/latex/graphics/lscape.sty
+ texmf-dist/tex/latex/graphics/pctex32.def
+ texmf-dist/tex/latex/graphics/pctexhp.def
+ texmf-dist/tex/latex/graphics/pctexps.def
+ texmf-dist/tex/latex/graphics/pctexwin.def
+ texmf-dist/tex/latex/graphics/rotating.sty
+ texmf-dist/tex/latex/graphics/tcidvi.def
+ texmf-dist/tex/latex/graphics/trig.sty
+ texmf-dist/tex/latex/graphics/truetex.def
+catalogue-ctan /macros/latex/required/graphics
+catalogue-date 2016-07-12 11:21:29 +0200
+catalogue-license lppl1.3
+catalogue-topics collection

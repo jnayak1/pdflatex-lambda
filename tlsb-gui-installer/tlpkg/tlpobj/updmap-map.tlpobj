@@ -1,0 +1,16 @@
+name updmap-map
+category Package
+revision 42044
+containersize 140336
+containerchecksum f09d37d7315bb090ee8754ce9ee9ca7ff989b7acb503e8ea0750e182ad119937a331cd956dc81e60d1883e6debaedf487f0516775f65c9f918c8c54ae93138a0
+runfiles size=3289
+ texmf-dist/fonts/map/dvipdfmx/updmap/kanjix.map
+ texmf-dist/fonts/map/dvips/updmap/builtin35.map
+ texmf-dist/fonts/map/dvips/updmap/download35.map
+ texmf-dist/fonts/map/dvips/updmap/ps2pk.map
+ texmf-dist/fonts/map/dvips/updmap/psfonts.map
+ texmf-dist/fonts/map/dvips/updmap/psfonts_pk.map
+ texmf-dist/fonts/map/dvips/updmap/psfonts_t1.map
+ texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+ texmf-dist/fonts/map/pdftex/updmap/pdftex_dl14.map
+ texmf-dist/fonts/map/pdftex/updmap/pdftex_ndl14.map

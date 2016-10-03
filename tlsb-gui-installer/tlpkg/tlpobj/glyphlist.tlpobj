@@ -1,0 +1,9 @@
+name glyphlist
+category Package
+revision 41545
+containersize 24680
+containerchecksum 335aea5c560785e6ae8c777a60b24b44e632ec96f5755587e77009e086c28898726cd08024911ed2868a186f9ae212b61f6e75345a698e1aa562ac5bff13d2a3
+runfiles size=24
+ texmf-dist/fonts/map/glyphlist/glyphlist.txt
+ texmf-dist/fonts/map/glyphlist/pdfglyphlist.txt
+ texmf-dist/fonts/map/glyphlist/texglyphlist.txt

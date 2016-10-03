@@ -1,0 +1,96 @@
+name tools
+category Package
+revision 41688
+catalogue latex-tools
+shortdesc The LaTeX standard tools bundle
+longdesc A collection of (variously) simple tools provided as part of
+longdesc the LaTeX required tools distribution, comprising the packages:
+longdesc afterpage, array, bm, calc, dcolumn, delarray, enumerate,
+longdesc fileerr, fontsmpl, ftnright, hhline, indentfirst, layout,
+longdesc longtable, multicol, rawfonts, showkeys, somedefs, tabularx,
+longdesc theorem, trace, varioref, verbatim, xr, and xspace.
+containersize 38980
+containerchecksum 70421bfb0bd0ecbd77d7c26cca74959fb0f4f3da060d7f1cc0991399e7225cbeddbff37a55f81f5cb86e9b8f423427b88f7a63b0844570a94d20df67120fea0d
+doccontainersize 5151636
+doccontainerchecksum 4c98ec7e7da12b4e7af70925341df73188b89aac244378c04b3c95d064a881297226aae80a6fc008217aed3ee34a470387d1cce57d9dbc9848b8eeb6566eee8f
+srccontainersize 216240
+srccontainerchecksum 5a37b87ec49ccc6a8a52da339e660434f7f1afbe94d85d84b970236475e422450d09081678b075b973033df9a92e49294d3336e2b6053dce81e785f730fcc6bd
+srcfiles size=254
+ texmf-dist/source/latex/tools/afterpage.dtx
+ texmf-dist/source/latex/tools/afterpage.ins
+ texmf-dist/source/latex/tools/array.dtx
+ texmf-dist/source/latex/tools/bm.dtx
+ texmf-dist/source/latex/tools/bm.ins
+ texmf-dist/source/latex/tools/calc.dtx
+ texmf-dist/source/latex/tools/dcolumn.dtx
+ texmf-dist/source/latex/tools/delarray.dtx
+ texmf-dist/source/latex/tools/enumerate.dtx
+ texmf-dist/source/latex/tools/fileerr.dtx
+ texmf-dist/source/latex/tools/fontsmpl.dtx
+ texmf-dist/source/latex/tools/ftnright.dtx
+ texmf-dist/source/latex/tools/hhline.dtx
+ texmf-dist/source/latex/tools/indentfirst.dtx
+ texmf-dist/source/latex/tools/layout.dtx
+ texmf-dist/source/latex/tools/longtable.dtx
+ texmf-dist/source/latex/tools/longtable.ins
+ texmf-dist/source/latex/tools/multicol.dtx
+ texmf-dist/source/latex/tools/multicol.ins
+ texmf-dist/source/latex/tools/rawfonts.dtx
+ texmf-dist/source/latex/tools/shellesc.dtx
+ texmf-dist/source/latex/tools/showkeys.dtx
+ texmf-dist/source/latex/tools/somedefs.dtx
+ texmf-dist/source/latex/tools/tabularx.dtx
+ texmf-dist/source/latex/tools/tabularx.ins
+ texmf-dist/source/latex/tools/theorem.dtx
+ texmf-dist/source/latex/tools/tools.ins
+ texmf-dist/source/latex/tools/trace.dtx
+ texmf-dist/source/latex/tools/varioref.dtx
+ texmf-dist/source/latex/tools/varioref.ins
+ texmf-dist/source/latex/tools/verbatim.dtx
+ texmf-dist/source/latex/tools/xr.dtx
+ texmf-dist/source/latex/tools/xspace.dtx
+runfiles size=79
+ texmf-dist/tex/latex/tools/.tex
+ texmf-dist/tex/latex/tools/afterpage.sty
+ texmf-dist/tex/latex/tools/array.sty
+ texmf-dist/tex/latex/tools/bm.sty
+ texmf-dist/tex/latex/tools/calc.sty
+ texmf-dist/tex/latex/tools/dcolumn.sty
+ texmf-dist/tex/latex/tools/delarray.sty
+ texmf-dist/tex/latex/tools/e.tex
+ texmf-dist/tex/latex/tools/enumerate.sty
+ texmf-dist/tex/latex/tools/fontsmpl.sty
+ texmf-dist/tex/latex/tools/fontsmpl.tex
+ texmf-dist/tex/latex/tools/ftnright.sty
+ texmf-dist/tex/latex/tools/h.tex
+ texmf-dist/tex/latex/tools/hhline.sty
+ texmf-dist/tex/latex/tools/indentfirst.sty
+ texmf-dist/tex/latex/tools/layout.sty
+ texmf-dist/tex/latex/tools/longtable.sty
+ texmf-dist/tex/latex/tools/multicol.sty
+ texmf-dist/tex/latex/tools/q.tex
+ texmf-dist/tex/latex/tools/r.tex
+ texmf-dist/tex/latex/tools/rawfonts.sty
+ texmf-dist/tex/latex/tools/s.tex
+ texmf-dist/tex/latex/tools/shellesc.sty
+ texmf-dist/tex/latex/tools/showkeys.sty
+ texmf-dist/tex/latex/tools/somedefs.sty
+ texmf-dist/tex/latex/tools/tabularx.sty
+ texmf-dist/tex/latex/tools/thb.sty
+ texmf-dist/tex/latex/tools/thc.sty
+ texmf-dist/tex/latex/tools/thcb.sty
+ texmf-dist/tex/latex/tools/theorem.sty
+ texmf-dist/tex/latex/tools/thm.sty
+ texmf-dist/tex/latex/tools/thmb.sty
+ texmf-dist/tex/latex/tools/thp.sty
+ texmf-dist/tex/latex/tools/trace.sty
+ texmf-dist/tex/latex/tools/varioref.sty
+ texmf-dist/tex/latex/tools/verbatim.sty
+ texmf-dist/tex/latex/tools/verbtest.tex
+ texmf-dist/tex/latex/tools/x.tex
+ texmf-dist/tex/latex/tools/xr.sty
+ texmf-dist/tex/latex/tools/xspace.sty
+catalogue-ctan /macros/latex/required/tools
+catalogue-date 2016-07-12 07:31:50 +0200
+catalogue-license lppl1.3
+catalogue-topics collection
