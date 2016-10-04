@@ -7,3 +7,6 @@ AWS Lambda function handler for converting LaTeX documents into PDFs. Python.
 - `tar -xvzf install-tl-...`
 - `cd install-tl-...`
 - `install-tl -gui text`
+
+### Using TeXLive Package
+- Add /path/to/package/bin/x86_64-linux to PATH environment variable
