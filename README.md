@@ -1,4 +1,4 @@
-# pdflatex-lambda
+# pdflatex-lambda (WIP)
 AWS Lambda function handler for converting LaTeX documents into PDFs. Python.
 
 ### Creating TeXLive Package
