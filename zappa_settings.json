@@ -1,0 +1,10 @@
+{
+    "latex": {
+        "app_function": "pdflatex_lambda.lambda_handler", 
+        "aws_region": "us-east-1", 
+        "profile_name": "default", 
+        "project_name": "pdflatex-lambda", 
+        "runtime": "python2.7", 
+        "s3_bucket": "zappa-dpfk7s8xi"
+    }
+}
