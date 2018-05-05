@@ -9,15 +9,31 @@ import subprocess
 s3 = boto3.client('s3')
 
 def lambda_handler(event, context):
-    
-    bucket = event['Records'][0]['s3']['bucket']['name']
-    key = event['Records'][0]['s3']['object']['key']
-    download_path = '/tmp/{}{}'.format(uuid.uuid4(), key)
-    s3.download_file(bucket, key, download_path)
+  
+  bucket = event['Records'][0]['s3']['bucket']['name']
+  key = event['Records'][0]['s3']['object']['key']
+  download_path = '/tmp/{}{}'.format(uuid.uuid4(), key)
+  s3.download_file(bucket, key, download_path)
 
-    bashCommand = "./tlsb-gui-installer/bin/x86_64-linux/pdflatex " + download_path
-    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
+  directories = ["/tmp/aux", "/tmp/output"]
+  for directory in directories:
+    if not os.path.exists(directory):
+      os.makedirs(directory)
+
+  bashCommand = ["/tmp/pdflatex-lambda/tlsb-gui-installer/bin/x86_64-linux/pdflatex",
+                 "-interaction=nonstopmode", "-aux-directory=/tmp/aux", 
+                 "-output-directory=/tmp/output", download_path]
+  process = subprocess.Popen(bashCommand, stdout=subprocess.PIPE)
+  output, error = process.communicate()
+  print(output)
+  print(error)
+  pdfPath = download_path.replace("/tmp", "/tmp/output").replace(".tex", ".pdf")
+  print(pdfPath)
+  res = boto3.resource('s3')
+  bucket = res.Bucket(bucket + "-pdf")
+
+  bucket.upload_file(pdfPath, key.replace(".tex", ".pdf"))
+
 
 
 if __name__ == "__main__":
