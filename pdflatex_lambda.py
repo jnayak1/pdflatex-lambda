@@ -15,9 +15,8 @@ def lambda_handler(event, context):
     download_path = '/tmp/{}{}'.format(uuid.uuid4(), key)
     s3.download_file(bucket, key, download_path)
 
-    my_env = os.environ.copy()
-    bashCommand = "./tlsb-gui-installer/bin/x86_64-linux/pdflatex" + download_path
-    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE, env=my_env)
+    bashCommand = "./tlsb-gui-installer/bin/x86_64-linux/pdflatex " + download_path
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
 
